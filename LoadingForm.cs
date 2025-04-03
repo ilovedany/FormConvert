@@ -6,7 +6,7 @@ namespace FormConvert
         public LoadingForm()
         {
             InitializeComponent();
-            Shown += LoadingFormAsync; //событие показа загрузочной 
+            Shown += LoadingFormAsync; //СЃРѕР±С‹С‚РёРµ РїРѕРєР°Р·Р° Р·Р°РіСЂСѓР·РѕС‡РЅРѕР№ С„РѕСЂРјС‹
         }
         private async void LoadingFormAsync(object sender, EventArgs e)
         {
@@ -20,12 +20,12 @@ namespace FormConvert
                     label2.Text = $"{progress.ToString()}%";
                 })));
 
-                await wrapper.ViewSelectionMethod(1, @"path to xml", @"path to xlsx", true, true); //передача параметрв
+                await wrapper.ViewSelectionMethod(1, @"path to xml", @"path to xlsx", true, true); //РїРµСЂРµРґР°С‡Р° РїР°СЂР°РјРµС‚СЂРІ
                 this.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка: {ex.Message}");
+                MessageBox.Show($"ГЋГёГЁГЎГЄГ : {ex.Message}");
                 this.Close();
             }
         }
