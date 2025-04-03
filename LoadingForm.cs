@@ -6,8 +6,7 @@ namespace FormConvert
         public LoadingForm()
         {
             InitializeComponent();
-            Shown += LoadingFormAsync; //событие показа загрузочной формы
-
+            Shown += LoadingFormAsync; //событие показа загрузочной 
         }
         private async void LoadingFormAsync(object sender, EventArgs e)
         {
@@ -21,7 +20,7 @@ namespace FormConvert
                     label2.Text = $"{progress.ToString()}%";
                 })));
 
-                await wrapper.ViewSelectionMethod(1, @"C:\XmlFiles\Смена профессии.xml", @"C:\XmlFiles\dan4ikkrasava.xlsx", false, true);
+                await wrapper.ViewSelectionMethod(1, @"path to xml", @"path to xlsx", true, true); //передача параметрв
                 this.Close();
             }
             catch (Exception ex)
